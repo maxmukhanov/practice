@@ -15,4 +15,10 @@ public class TaskSchedulerTest {
     assertThat(actual).isEqualTo(8);
   }
 
+
+  @Test
+  public void name() {
+    int rem = -1 % -2;
+    System.out.println(rem);
+  }
 }
