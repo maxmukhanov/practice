@@ -2,12 +2,6 @@ package com.max.practice.excercise;
 
 import com.max.practice.excercise.partition.HoarePartition;
 
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-
 public class QuickSort {
 
   public void sort(int[] array) {
@@ -23,10 +17,6 @@ public class QuickSort {
     sort(array, lo, index);
     sort(array, index + 1, hi);
 
-    TreeMap<Integer, List<Integer>> map = new TreeMap<>();
-    Map.Entry<Integer, List<Integer>> entry = map.ceilingEntry(1);
-    LinkedList<Integer> list = new LinkedList<>();
-    list.getLast();
   }
 
 }

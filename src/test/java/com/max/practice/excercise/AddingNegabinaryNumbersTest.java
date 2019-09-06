@@ -29,18 +29,4 @@ public class AddingNegabinaryNumbersTest {
     assertThat(val.substring(val.indexOf("||") + "||".length())).isEqualTo("hi");
   }
 
-  @Test
-  public void stackSize() {
-    int limit = 8990;
-
-    doRecursion(1, limit);
-
-  }
-
-  private void doRecursion(int i, int limit) {
-    System.out.println(i);
-    if (i == limit) return;
-
-    doRecursion(i + 1, limit);
-  }
 }

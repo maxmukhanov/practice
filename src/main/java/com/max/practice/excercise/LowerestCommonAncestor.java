@@ -1,7 +1,5 @@
 package com.max.practice.excercise;
 
-import com.max.practice.excercise.TreeNode;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
