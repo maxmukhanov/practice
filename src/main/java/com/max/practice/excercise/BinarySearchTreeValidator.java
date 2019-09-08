@@ -4,6 +4,8 @@ import java.util.Stack;
 
 public class BinarySearchTreeValidator {
 
+//    Idea is to do in-order traversal and keep reference to previous seen element
+//    Previous element should be less than current, otherwise BST is invalid
     public boolean isValidBST(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
 
