@@ -2,7 +2,7 @@ package com.max.practice.excercise;
 
 import java.util.Arrays;
 
-public class LongestIncreacingSubsequece {
+public class LongestIncreasingSubsequence {
 
   public int lengthOfLIS(int[] nums) {
     return lenDP(nums);

@@ -4,8 +4,8 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class LongestIncreacingSubsequeceTest {
-  private LongestIncreacingSubsequece sut = new LongestIncreacingSubsequece();
+public class LongestIncreasingSubsequenceTest {
+  private LongestIncreasingSubsequence sut = new LongestIncreasingSubsequence();
 
   @Test
   public void shouldReturnFourForLIS() {
