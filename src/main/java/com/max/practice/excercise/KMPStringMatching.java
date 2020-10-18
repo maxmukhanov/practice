@@ -32,19 +32,19 @@ public class KMPStringMatching {
 
   int[] buildPrefixSuffixTable(String pattern) {
     int [] ps = new int[pattern.length()];
-    int j = 0, i = 1;
+    int i = 0, j = 1;
 
 
-    while (i < ps.length) {
-      if (pattern.charAt(j) == pattern.charAt(i)) {
-        ps[i] = j + 1;
-        i++;
+    while (j < ps.length) {
+      if (pattern.charAt(i) == pattern.charAt(j)) {
+        ps[j] = i + 1;
         j++;
+        i++;
       } else {
-        if (j == 0) {
-          i++;
+        if (i == 0) {
+          j++;
         } else {
-          j = ps [j - 1];
+          i = ps [i - 1];
         }
       }
     }
