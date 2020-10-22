@@ -5,9 +5,26 @@ import java.util.Arrays;
 public class LongestIncreasingSubsequence {
 
   public int lengthOfLIS(int[] nums) {
-    return lenDP(nums);
+//    return lenDP(nums);
+    return lenDPBinarySearch(nums);
   }
 
+  //time O(NlogN), space O(N)
+  private int lenDPBinarySearch(int []nums) {
+    int n = nums.length;
+    int [] dp = new int[n];
+
+    int len = 0;
+
+    for (int num: nums) {
+      int pos = Arrays.binarySearch(dp, 0, len, num);
+      if (pos < 0) pos = -(pos + 1);
+      dp[pos] = num;
+      if (pos == len) len++;
+    }
+
+    return len;
+  }
 
 //  time O(N), space O(N)
   private int lenDP(int nums[]) {
