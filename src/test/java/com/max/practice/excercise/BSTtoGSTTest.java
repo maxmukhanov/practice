@@ -23,7 +23,7 @@ public class BSTtoGSTTest {
     root.right.right = new TreeNode(7);
     root.right.right.right = new TreeNode(8);
 
-    List<Integer> actual = TreeTraversal.inOrderIterative(bsTtoGST.bstToGst(root));
+    List<Integer> actual = new TreeTraversalImpl().inOrderIterative(bsTtoGST.bstToGst(root));
 
     assertThat(actual).containsExactly(36, 36, 35, 33, 30, 26, 21, 15, 8);
   }

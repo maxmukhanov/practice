@@ -2,11 +2,10 @@ package com.max.practice.excercise;
 
 import java.util.Stack;
 
-import static com.max.practice.excercise.TreeTraversal.inOrderIterative;
 
 public class BSTtoGST {
   public TreeNode bstToGst(TreeNode root) {
-    int sum = inOrderIterative(root).stream().mapToInt(x -> x).sum();
+    int sum = new TreeTraversalImpl().inOrderIterative(root).stream().mapToInt(x -> x).sum();
 
     Stack<TreeNode> st = new Stack<>();
     TreeNode node = root;

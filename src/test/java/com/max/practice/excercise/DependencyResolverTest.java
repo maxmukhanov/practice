@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class DependencyResolverTest {
-  private DependencyResolver dependencyResolver = new DependencyResolver();
+  private DependencyResolver dependencyResolver = new DependencyResolverKahnsAglorithm();
 
   @Test
   public void shouldDoTopologyOrder() {
