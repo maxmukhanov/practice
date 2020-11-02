@@ -24,12 +24,7 @@ public class KSmallestElementInSortedMatrix {
     public int kthSmallest(int[][] matrix, int k) {
         int n = matrix.length;
         int m = matrix[0].length;
-        PriorityQueue<int[]> heap = new PriorityQueue<>(new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                return Integer.compare(o1[0], o2[0]);
-            }
-        });
+        PriorityQueue<int[]> heap = new PriorityQueue<>(Comparator.comparingInt(o -> o[0]));
         for(int j = 0; j < k && j < m; j++) heap.offer(new int[]{matrix[0][j], 0, j});
 
         while (--k > 0) {
