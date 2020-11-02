@@ -13,7 +13,7 @@ import java.util.PriorityQueue;
 public class KSmallestElementInSortedMatrix {
 
     /*
-    * Use heap(Java Priority Queue). time O(nmlog(nm)), space O(nm)
+    * Use heap(Java Priority Queue). time O(klog(k)), space O(k)
     *
     * 1. Put first row in a min heap. We need to track elements value and position in a heap
     * 2. From 1 to k do the following:
@@ -30,7 +30,7 @@ public class KSmallestElementInSortedMatrix {
                 return Integer.compare(o1[0], o2[0]);
             }
         });
-        for(int j = 0; j < m; j++) heap.offer(new int[]{matrix[0][j], 0, j});
+        for(int j = 0; j < k && j < m; j++) heap.offer(new int[]{matrix[0][j], 0, j});
 
         while (--k > 0) {
             int[] tuple = heap.poll();
